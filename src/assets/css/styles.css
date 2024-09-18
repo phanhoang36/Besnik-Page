@@ -1,0 +1,669 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:#0F1B4C;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Fz Poppins", sans-serif;
+}
+/* =======common======== */
+a {
+    text-decoration: none;
+}
+
+.content{
+    width: 1110px;
+    max-width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn{
+    display: inline-block;
+    min-width: 98px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 18px 16px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+/* đặt giới hạn dòng và hiển thị ... khi quá số hàng */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* =======header======= */
+.header{
+    position: relative;
+    background-color: aliceblue;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+}
+.navbar ul{
+    display: flex;
+    margin-left: 50px;
+}
+
+.navbar .actions{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #121111;
+}
+
+.navbar ul a {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #4F5336;
+    padding: 8px 14px ;
+}
+
+.navbar .action-link{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.navbar .action-btn{
+    padding: 13px 16px ;
+    margin-left: 18px;
+    border-radius: 8px;
+}
+
+.hero{
+    margin-top: 130px;
+}
+
+.hero .info  {
+    width: 51%;
+}
+
+.hero .sub-title{
+    color: #687690;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+} 
+
+.hero .title{
+    margin-top: 8px;
+    color: #000336;
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 1.19; /* 118.75% */
+}
+
+.hero .desc{
+    margin-top: 3rem;
+    color: #5A6473;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3.2rem; /* 177.778% */
+}
+
+.hero .hero-cta{
+    min-width: 170px;
+    margin-top: 40px;
+}
+
+.hero-img{
+    position: absolute;
+    right: calc((100vw - 1110px) / 2 - 100px);
+    bottom: 0;
+}
+
+
+/* =======Client======= */
+
+.clients {
+    margin-top: 79px;
+    padding: 43px 0 64px;
+}
+
+.clients .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients .desc{
+    color: #7D8589;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem; /* 125% */
+}
+
+.clients .row-desc {
+    margin-top: 23px;
+}
+
+.clients .images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 96px;
+
+}
+ /* <!-- =========Guider======== --> */
+ .guides{
+    margin-top: 40px;;
+    padding: 93px 0 79px;
+ }
+
+ .guides .sub-title {
+    color: #000339;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 3.5rem; /* 100% */
+    position: relative;
+ }
+
+ .guides .desc {
+     width: 459px;
+     max-width: 100%;
+     margin: 0 auto;
+    margin-top: 20px;
+    color: #5A6473;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3rem; /* 187.5% */
+ }
+
+ .guides .sub-title::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+    /* dịch lùi lại 50% của thuộc tính before */
+    transform: translateX(-50%);
+ } 
+
+ .list-guider{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+ }
+
+ .list-guider .guider-item{
+    margin: 0 70px;
+    text-align: center;
+ }
+
+ .list-guider .title {
+    margin-top: 26px;
+    color: #3B3C45;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.2rem; /* 110% */
+ }
+
+ .list-guider .guider-item .link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0689FF;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-right: 8px;
+ }
+
+ .guider-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+ }
+
+ .guider-cta .btn {
+    min-width: 170px;
+    height: 50px;
+ }
+
+ /* feartured */
+
+ .feartured {
+    margin-top: 41px;
+    padding: 110px 0;
+    background-color: #eef7ff;
+ }
+
+ .feartured .sub-title {
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 3.5rem; /* 100% */
+ }
+
+ .feartured .row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .feartured .link {
+    margin-left: 8px;
+    color: #0689FF;
+    font-size: 1.125rem;
+    font-weight: 600;
+ }
+
+ .feartured .link .arrow{
+    position: relative;
+    top: 1px;
+ }
+
+ .feartured .list{
+    margin-top: 70px;
+    display: flex;
+    /* gap la tao khoang cach cua the con trong 1 the cha */
+    gap: 30px;
+ }
+
+ .feartured .item {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+ }
+
+ .feartured .item .thum {
+    width: 100%;
+    height: 227px;
+    /* object-fit: cover; giu nguyen ty le anh va lap day khung hinh   */
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+ }
+
+ .feartured .item .body {
+    padding: 17px 20px 24px;
+ }
+
+ .feartured .item .title a {
+     color: #000339;
+     font-size: 2rem;
+     font-weight: 600;
+     line-height: 1.5; /* 100% */
+     /* giới hạn dòng là 2  */
+    }
+
+.feartured .item .desc {
+    margin-top: 11px;
+    color: #A3A6AB;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    word-break: break-all;
+    /* giới hạn dòng là 3 ở class line-clamp */
+    --line-clamp: 3;
+}
+
+.feartured .item .info {
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.feartured .item .label {
+    /* thẻ inline chỉ ko hoạt động với magin trên dưới */
+    margin-left: 9px;
+    color: #4D4D52;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4rem; /* 100% */
+    letter-spacing: 0.014rem;
+}
+
+.feartured .item .icon {
+    margin-left: 23px;
+}
+
+.feartured .item .icon:first-child {
+    margin-left: 0;
+}
+
+/* =======Stats======= */
+
+.stats {
+    margin-top: 75px;
+    padding: 50px 0;
+}
+
+.stats .content{
+    width: 1048px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-blog, 
+.stats .info{
+    width: 50%;
+}
+
+.stats .img-blog {
+    position: relative;
+}
+
+.stats .stats-trend {
+    padding: 45px 22px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 239px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: #FFF;
+}
+
+
+
+.stats .img-blog .images {
+    /* chỉ có thẻ block va flex box grid mới dùng được magin=auto để căn sắt trái phải và căn giữa */
+    display: block;
+    margin-left: auto;
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.stats .info {
+    padding: 79px 0 0 165px;
+}
+
+.stats .sub-title {
+    position: relative;
+    width: 269px;
+    height: 142px;
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 4.5rem; /* 128.571% */
+}
+
+.stats .sub-title::before {
+    top: -10px;
+    position: absolute;
+    left: 0;
+    content: "";
+    display: block;
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+
+}
+
+.stats .info .desc {
+    width: 309px;
+    margin-top: 20px;
+    color: #5A6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3rem; /* 187.5% */
+}
+
+.stats .row .value {
+    color: #000339;
+    font-family: Poppins;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.stats .stats-trend .icon {
+    /* có display: flex nên không cần chuyển thành thẻ block */
+    margin-left: auto;
+}
+
+.stats .stats-trend .desc {
+    margin-top: 8px;
+    width: 194px;
+    height: 31px;
+    color: #A7A7A7;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8rem; /* 150% */
+}
+
+.stats .separate {
+    margin-top: 25px;
+    height: 1.2px;
+    background: #E9E9E9;
+}
+
+
+.stats-trend .avatar-block{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 26px;
+    gap: 16px 14px;
+}
+
+.stats .avatar-group {
+    display: flex;
+}
+
+.stats .avatar{
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -3px;
+}
+
+.stats .avatar:first-child{
+    margin-left: 0;
+}
+
+.stats .avatar-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8C120;
+}
+
+.stats .avatar-group span {
+    color: #FFF;
+    text-align: center;
+    font-size: 0.7261rem;
+    font-weight: 450;
+    letter-spacing: -0.0145rem;
+}
+
+.stats .row-qty{
+    display: flex;
+    margin-top: 110px;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.row-qty .qty{
+    color: #000;
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 6.4rem; /* 100% */
+}
+
+.row-qty .qty-desc {
+    margin-top: 22px;
+    color: #7B8087;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.row-qty .qty-item{
+    margin-left: 220px;
+}
+
+.row-qty .qty-item:first-child{
+    margin-left: 0;
+}
+
+/* <!-- Subcription --> */
+
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body{
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 1110px;
+    height: 370px;
+    border-radius: 20px;
+    background: #063183;
+}
+
+.subscription .body .info {
+    padding: 0 80px;
+    width: 671px;
+    max-width: 100%;
+}
+
+.subscription .info .sub-title{
+    color: #FFF;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.5; /* 100% */
+}
+
+.subscription .info .desc {
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3rem; /* 187.5% */
+    opacity: 0.75;
+   
+}
+
+.subscription .btn {
+    margin-top: 20px;
+    min-width: 151px;
+    background-color: #FFF;
+    color: #002366;
+}
+
+.subscription .images{
+    position: absolute;
+    bottom: 0;
+    right: 221px;
+}
+
+/* footer */
+.footer{
+    margin-top: 55px;
+    padding: 55px 0 58px;
+}
+
+.footer .row {
+    display: flex;
+    
+}
+
+.footer .row-top {
+    /* dùng gap thì khong phải magin cho tất cả các phần tử con */
+    gap: 185px;
+}
+
+.footer .row-top .deading{
+    color: #1C1C1D;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.footer .list, 
+.footer .desc {
+    margin-top: 42px;
+    
+}
+
+.footer  .iteam {
+   margin-top: 18px;
+}
+
+.footer  .iteam a {
+    color: #7A7A7E;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem; /* 175% */
+    /* không cho xuống hàng */
+    white-space: nowrap;
+}
+
+
+.footer .colum .desc {
+    color: #7A7A7E;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem; /* 175% */
+}
+
+.footer .colum .social {
+    display: flex;
+    margin-top: 40px;
+    gap: 16px;
+}
+
+.footer .social .social-link {
+    /* phải có display:flex thì thẻ a mới đặt đc wh vì là thẻ inline */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    background-color: #F9F9F9;
+}
+
+.footer .row-bottom {
+    margin-top: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .row-bottom .copyright {
+    color: #C2C2C2;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+
+
